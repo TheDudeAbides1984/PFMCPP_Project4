@@ -69,7 +69,7 @@ float FloatType::multiply(float lhs, float rhs)
 
 float FloatType::divide(float lhs, float rhs)
 {
-    if (lhs == 0 || rhs == 0)
+    if (rhs == 0)
     {
         std::cout << "Warning: You are dividing by zero" << std::endl;
     }
@@ -101,15 +101,11 @@ double DoubleType::multiply(double lhs, double rhs)
 
 double DoubleType::divide(double lhs, double rhs)
 {
-    if(lhs == 0 || rhs == 0)
+    if(rhs == 0)
     {
-        std::cout << "Division by zero is not allowed" << std::endl;
-        return 0;
+        std::cout << "Warning: You are dividing by zero" << std::endl;
     }
-    else
-    {
         return lhs / rhs;
-    }
 }
 
 struct IntType
@@ -137,7 +133,7 @@ int IntType::multiply(int lhs, int rhs)
 
 int IntType::divide(int lhs, int rhs)
 {
-    if (lhs == 0 || rhs == 0)
+    if (rhs == 0)
     {
         std::cout << "Division by zero is not allowed" << std::endl;
         return 0;
