@@ -42,7 +42,155 @@ send me a DM to check your pull request
  */
 
 #include <iostream>
+
+
+struct FloatType
+{
+    float add(float lhs, float rhs);
+    float subtract(float lhs, float rhs);
+    float multiply(float lhs, float rhs);
+    float divide(float lhs, float rhs);
+};
+
+float FloatType::add(float lhs, float rhs)
+{
+    return lhs + rhs;
+}
+
+float FloatType::subtract(float lhs, float rhs)
+{
+    return lhs - rhs;
+}
+
+float FloatType::multiply(float lhs, float rhs)
+{
+    return lhs * rhs;
+}
+
+float FloatType::divide(float lhs, float rhs)
+{
+    if (lhs == 0 || rhs == 0)
+    {
+        std::cout << "Warning: You are dividing by zero" << std::endl;
+    }
+    return lhs / rhs;
+}
+
+struct DoubleType
+{
+    double add(double lhs, double rhs);
+    double subtract(double lhs, double rhs);
+    double multiply(double lhs, double rhs);
+    double divide(double lhs, double rhs);
+};
+
+double DoubleType::add(double lhs, double rhs)
+{
+    return lhs + rhs;
+}
+
+double DoubleType::subtract(double lhs, double rhs)
+{
+    return lhs - rhs;
+}
+
+double DoubleType::multiply(double lhs, double rhs)
+{
+    return lhs * rhs;
+}
+
+double DoubleType::divide(double lhs, double rhs)
+{
+    if(lhs == 0 || rhs == 0)
+    {
+        std::cout << "Division by zero is not allowed" << std::endl;
+        return 0;
+    }
+    else
+    {
+        return lhs / rhs;
+    }
+}
+
+struct IntType
+{
+    int add(int lhs, int rhs);
+    int subtract(int lhs, int rhs);
+    int multiply(int lhs, int rhs);
+    int divide(int lhs, int rhs);
+};
+
+int IntType::add(int lhs, int rhs)
+{
+    return lhs + rhs;
+}
+
+int IntType::subtract(int lhs, int rhs)
+{
+    return lhs - rhs;
+}
+
+int IntType::multiply(int lhs, int rhs)
+{
+    return lhs * rhs;
+}
+
+int IntType::divide(int lhs, int rhs)
+{
+    if (lhs == 0 || rhs == 0)
+    {
+        std::cout << "Division by zero is not allowed" << std::endl;
+        return 0;
+    }
+    else
+    {
+        return lhs / rhs;
+    }
+}
+
 int main()
 {
+    FloatType ft1;
+    FloatType ft2;
+    FloatType ft3;
+
+    float result1 = ft1.add(45.7, 34.6);
+    float result2 = ft2.subtract(98.4, 12.9);
+    float result3 = ft3.multiply(2.7, 98.23);
+    float result4 = ft1.divide(2.7, 0.0);
+
+    std::cout << "result of ft1.add(): " << result1 << std::endl;
+    std::cout << "result of ft2.subtract(): " << result2 << std::endl;
+    std::cout << "result of ft3.multiply(): " << result3 << std::endl;
+    std::cout << "result of ft1.divide(): " << result4 << std::endl;
+
+    DoubleType d1;
+    DoubleType d2;
+    DoubleType d3;
+
+    double resultD1 = d1.add(83.23, 94.12);
+    double resultD2 = d2.subtract(93.01,68.94);
+    double resultD3 = d3.multiply(19.23, 784.12);
+    double resultD4 = d1.divide(0, 27.06);
+
+    std::cout << "result of d1.add(): " << resultD1 << std::endl;
+    std::cout << "result of d2.subtract(): " << resultD2 << std::endl;
+    std::cout << "result of d3.multiply(): " << resultD3 << std::endl;
+    std::cout << "result of d1.divide(): " << resultD4 << std::endl;
+
+    IntType i1;
+    IntType i2;
+    IntType i3;
+
+    int resultI1 = i1.add(3214, 87);
+    int resultI2 = i2.add(7, 482);
+    int resultI3 = i3.add(834, 7);
+    int resultI4 = i1.add(4, 2);
+
+    std::cout << "result of i1.add(): " << resultI1 << std::endl;
+    std::cout << "result of i2.subtract(): " << resultI2 << std::endl;
+    std::cout << "result of i3.multiply(): " << resultI3 << std::endl;
+    std::cout << "result of i1.divide(): " << resultI4 << std::endl;
+
     std::cout << "good to go!" << std::endl;
 }
