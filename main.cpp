@@ -105,7 +105,7 @@ double DoubleType::divide(double lhs, double rhs)
     {
         std::cout << "Warning: You are dividing by zero" << std::endl;
     }
-        return lhs / rhs;
+        return lhs / rhs; FIXME indentation
 }
 
 struct IntType
@@ -138,7 +138,7 @@ int IntType::divide(int lhs, int rhs)
         std::cout << "Division by zero is not allowed" << std::endl;
         return 0;
     }
-    else
+    else FIXME: return 0 is the last thing that happens if the 'if()'' block is entered.  that means you don't need this 'else' block'
     {
         return lhs / rhs;
     }
