@@ -150,10 +150,10 @@ int main()
     FloatType ft2;
     FloatType ft3;
 
-    float result1 = ft1.add(45.7, 34.6);
-    float result2 = ft2.subtract(98.4, 12.9);
-    float result3 = ft3.multiply(2.7, 98.23);
-    float result4 = ft1.divide(2.7, 0.0);
+    float result1 = ft1.add(45.7f, 34.6f);
+    float result2 = ft2.subtract(98.4f, 12.9f);
+    float result3 = ft3.multiply(2.7f, 98.23f);
+    float result4 = ft1.divide(2.7f, 0.0f);
 
     std::cout << "result of ft1.add(): " << result1 << std::endl;
     std::cout << "result of ft2.subtract(): " << result2 << std::endl;
